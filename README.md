@@ -1,1 +1,1 @@
-# Third-Party-APIs--DailyPlanner-App
+# ThirdParty-APIs-DailyPlanner-App
