@@ -1,0 +1,27 @@
+Display the Current Day and Time
+    Use JavaScript to get the current date and time using the Date object or a library like dayjs.
+    Update the #currentDay and #time-display elements with the current day and time
+
+ Generate Timeblocks for Standard Business Hours:
+    Use JavaScript to dynamically generate timeblocks for standard business hours (e.g., 9 AM to 5 PM) within the container element in the HTML.
+    You can use a loop to create HTML elements representing each timeblock
+
+Color-Code Timeblocks Based on Past, Present, and Future
+    Compare the current time with the time represented by each timeblock to determine if it's in the past, present, or future.
+    Apply appropriate CSS classes to color-code the timeblocks based on their time status.
+
+Allow Users to Enter Events:
+    Add event listeners to the timeblocks to allow users to click and enter events.
+    You can use modal dialogs, input fields, or any other UI element to capture the event details.
+
+Save Events in Local Storage:
+    When a user enters an event and clicks a save button, use JavaScript to save the event details in local storage.
+    You can use the localStorage API to store and retrieve event data.
+    
+Persist Events Between Page Refreshes:
+Upon page load, retrieve the event data from local storage and populate the timeblocks with any saved events.
+
+
+
+
+ 
