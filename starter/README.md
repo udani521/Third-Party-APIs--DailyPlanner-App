@@ -43,6 +43,8 @@ Link:
 When you 'click' on the link, you should see a webpage similar to the one below.
 ![Alt text](<../images/Screenshot 2024-01-25 101659.png>)
 
+https://github.com/udani521/ThirdParty-APIs-DailyPlanner-App/blob/main/images/Screenshot%202024-01-25%20093718.png
+
 
 ## Credits
 
