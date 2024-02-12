@@ -38,10 +38,14 @@ Build a daily planner for working hours that allow to input tasks in time slots.
 
 There is no installation required for this website. Simply 'click' on the link below and you will be taken directly to the website!
 
-Link: 
+Link:  https://udani521.github.io/ThirdParty-APIs-DailyPlanner-App/
 
 When you 'click' on the link, you should see a webpage similar to the one below.
 ![Alt text](<../images/Screenshot 2024-01-25 101659.png>)
+
+https://github.com/udani521/ThirdParty-APIs-DailyPlanner-App/blob/main/images/Screenshot%202024-01-25%20093718.png
+
+https://github.com/udani521/ThirdParty-APIs-DailyPlanner-App/blob/main/images/Screenshot%202024-01-25%20093847.png
 
 
 ## Credits
