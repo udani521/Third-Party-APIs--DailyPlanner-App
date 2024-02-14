@@ -1,7 +1,7 @@
 // Handle displaying the time
 var currentDate = dayjs().format("dddd D, MMMM YYYY");
 $("#currentDay").text(currentDate);
-var currentTime = dayjs().format("HH:mm:ss");
+var currentTime = dayjs().format("H : mm : s ");
 $("#time-display").text(currentTime);
 
 // Generate timeblocks for standard business hours
@@ -15,7 +15,7 @@ businessHours.forEach(hour => {
   var hourLabel = document.createElement('div');
   hourLabel.textContent = hour;
   hourLabel.classList.add('hour');
-
+ //console.log(hourLabel);
   var textArea = document.createElement('textarea');
   textArea.classList.add('description');
 
@@ -30,11 +30,13 @@ businessHours.forEach(hour => {
 // Function to track tasks and make them change colors if they are in the past, present or future
 function auditTask() {
   var currentHour = new Date().getHours();
+  console.log(`Current Hour: ${currentHour}`);
+
 
   // Loop over each time block
   $('.time-block').each(function () {
     var timeId = parseInt($(this).text().split(" ")[0]);
-
+    console.log(`Time Block Hour: ${timeId}`);
     if (timeId < currentHour) {
       $(this).addClass('past').removeClass('present future');
     } else if (timeId === currentHour) {
@@ -48,20 +50,25 @@ function auditTask() {
 // Call the audit task function
 auditTask();
 
-// Save items in local storage
+
+/*// Save items in local storage
 $('.time-block').each(function() {
   var timeId = $(this).text().split(" ")[0];
   var textValue = $(this).find('.description').val();
   localStorage.setItem(timeId, textValue);
-});
+  console.log(`Saved: ${timeId} - ${textValue}`);
+});*/    //  comment out this part because this part causing the local storage to be overwritten with empty values
 
-// Retrieve items from local storage
+// Retrieve items from local storage on page load
 $('.time-block').each(function() {
   var timeId = $(this).text().split(" ")[0];
-  $(this).find('.description').val(localStorage.getItem(timeId));
+  var storedValue = localStorage.getItem(timeId);
+  if (storedValue !== null) {
+    $(this).find('.description').val(storedValue);
+  }
 });
 
-// Add event listeners to timeblocks to allow users to enter events and save to local storage
+// Save items in local storage
 $('.time-block').on('click', function() {
   var userInput = prompt('Enter your event:');
   if (userInput !== null) {
@@ -77,9 +84,4 @@ $('.time-block').each(function() {
   $(this).find('.description').val(localStorage.getItem(timeId));
 });
 
-//Clear button function for clearing content and local storage
-$("#clearFieldsBtn").click(function(event) {
-  event.preventDefault();
-  $("textArea").val("");
-  localStorage.clear();
-});
+
