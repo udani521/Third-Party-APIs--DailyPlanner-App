@@ -1,3 +1,4 @@
+$(document).ready(function () {
 // Handle displaying the time
 var currentDate = dayjs().format("dddd D, MMMM YYYY");
 $("#currentDay").text(currentDate);
@@ -6,7 +7,7 @@ $("#time-display").text(currentTime);
 
 // Generate timeblocks for standard business hours
 var container = document.getElementById('time-blocks');
-var businessHours = ['9.00', '10.00', '11.00', '12.00', '13.00', '14.00', '15.00', '16.00', '17.00'];
+var businessHours = ['9.00AM', '10.00AM', '11.00AM', '12.00PM', '13.00PM', '14.00PM', '15.00PM', '16.00PM', '17.00PM'];
 
 businessHours.forEach(hour => {
   var timeblock = document.createElement('div');
@@ -59,24 +60,25 @@ $('.time-block').each(function() {
   console.log(`Saved: ${timeId} - ${textValue}`);
 });*/    //  comment out this part because this part causing the local storage to be overwritten with empty values
 
-// Retrieve items from local storage on page load
-$('.time-block').each(function() {
-  var timeId = $(this).text().split(" ")[0];
-  var storedValue = localStorage.getItem(timeId);
-  if (storedValue !== null) {
-    $(this).find('.description').val(storedValue);
-  }
+// Retrieve and populate events from local storage on page load
+$(document).ready(function() {
+  $('.time-block').each(function() {
+    var timeId = $(this).find('.hour').text();
+    var storedValue = localStorage.getItem(timeId);
+    if (storedValue !== null) {
+      $(this).find('.description').val(storedValue);
+    }
+  });
 });
 
-// Save items in local storage
-$('.time-block').on('click', function() {
-  var userInput = prompt('Enter your event:');
-  if (userInput !== null) {
-    $(this).find('.description').val(userInput);
-    var timeId = $(this).text().split(" ")[0];
-    localStorage.setItem(timeId, userInput);
-  }
+ // Save items in local storage on button click
+ $('.saveBtn').on('click', function() {
+  var userInput = $(this).siblings('.description').val();
+  var timeId = $(this).siblings('.hour').text();
+  localStorage.setItem(timeId, userInput);
 });
+
+
 
 // Retrieve and populate events from local storage
 $('.time-block').each(function() {
@@ -84,4 +86,4 @@ $('.time-block').each(function() {
   $(this).find('.description').val(localStorage.getItem(timeId));
 });
 
-
+});

@@ -9,18 +9,17 @@ Build a daily planner for working hours that allow to input tasks in time slots.
 
   The app contain:
 
+    ¤ Display the current day at the top of the calendar when a user opens the planner.
 
-  ¤ Display the current day at the top of the calendar when a user opens the planner.
+    ¤ Present timeblocks for standard business hours when the user scrolls down.
 
-  ¤ Present timeblocks for standard business hours when the user scrolls down.
+    ¤ Color-code each timeblock based on past, present, and future when the timeblock is viewed.
 
-  ¤ Color-code each timeblock based on past, present, and future when the timeblock is viewed.
+    ¤ Allow a user to enter an event when they click a timeblock.
 
-  ¤ Allow a user to enter an event when they click a timeblock.
+    ¤ Save the event in local storage when the save button is clicked in that timeblock.
 
-  ¤ Save the event in local storage when the save button is clicked in that timeblock.
-
-  ¤ Persist events between refreshes of a page.
+    ¤ Persist events between refreshes of a page.
 
 
 ## Built With
@@ -41,11 +40,7 @@ There is no installation required for this website. Simply 'click' on the link b
 Link:  https://udani521.github.io/ThirdParty-APIs-DailyPlanner-App/
 
 When you 'click' on the link, you should see a webpage similar to the one below.
-![Alt text](<./starter/images/Screenshot 2024-01-25 101659.png/>)
-
-https://github.com/udani521/ThirdParty-APIs-DailyPlanner-App/blob/main/images/Screenshot%202024-01-25%20093718.png
-
-https://github.com/udani521/ThirdParty-APIs-DailyPlanner-App/blob/main/images/Screenshot%202024-01-25%20093847.png
+![Alt text](<./starter/images/Screenshot APPVIEW1.png>)
 
 
 ## Credits
@@ -53,6 +48,8 @@ https://github.com/udani521/ThirdParty-APIs-DailyPlanner-App/blob/main/images/Sc
 https://www.w3schools.com/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+https://developer.mozilla.org/en-US/
 
 ## License
 
