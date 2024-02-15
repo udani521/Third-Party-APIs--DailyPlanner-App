@@ -7,7 +7,7 @@ $("#time-display").text(currentTime);
 
 // Generate timeblocks for standard business hours
 var container = document.getElementById('time-blocks');
-var businessHours = ['9.00AM', '10.00AM', '11.00AM', '12.00PM', '13.00PM', '14.00PM', '15.00PM', '16.00PM', '17.00PM'];
+var businessHours = ['09.00', '10.00', '11.00', '12.00', '13.00', '14.00', '15.00', '16.00', '17.00'];
 
 businessHours.forEach(hour => {
   var timeblock = document.createElement('div');
